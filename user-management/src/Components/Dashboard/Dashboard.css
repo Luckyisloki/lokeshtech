@@ -1,0 +1,52 @@
+.container{
+    display: flex;
+    margin-top: 100px;
+    text-align: center;
+}
+.item{
+    height: 240px;
+    width: 350px;
+    background-color: rgb(218, 210, 210);
+    border-radius: 10px;
+    margin-right: 50px;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+   
+}
+.blue-btn{
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    width: 70px;
+    border: none;
+    padding: 5px;
+}
+.author{
+    color: black;
+}
+.log{
+    background-color: rgb(255, 25, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 3px;
+    margin-left: 93%;
+    margin-top: -40px;
+    width: 60px;
+}
+.table{
+    margin-top: 10px;
+    text-align: center;
+    border: 1px solid black;
+}
+td{
+    border: 1px solid black;
+    text-align: center;
+}
+thead{
+    background-color: blue;
+    color: white;
+    text-align: center;
+  
+}
