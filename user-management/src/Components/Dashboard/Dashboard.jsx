@@ -4,6 +4,7 @@ import { Table } from "react-bootstrap";
 
 const Dashboard = ()=> { 
   const [user, setUser] = useState([]);
+  const [search, setSearch] = useState('');
 
   const fetchData = () => {
     return fetch("https://restcountries.com/v2/all")
@@ -16,7 +17,13 @@ const Dashboard = ()=> {
   },[])
   return (
     <div>
-      <h1>User List</h1>
+      <center>
+      <h3>Enter City</h3>
+      <input type="text"
+      value={search}
+      placeholder="Search..."
+      onChange={(e)=> setSearch(e.target.value)}
+      />
       <button onClick={()=> window.location.href="/signin"} className='log'>Logout</button>
      
       <Table striped bordered hover className='table'>
@@ -33,7 +40,7 @@ const Dashboard = ()=> {
                          </thead>
                          <tbody>
                        {
-                        user.map((item)=>{
+                        user.filter(city => city.name.toLowerCase().includes(search.toLowerCase())).map((item)=>{
                           return(
                             
                                <tr>
@@ -53,7 +60,7 @@ const Dashboard = ()=> {
 
                        </tbody>
     </Table>
-
+</center>
     </div>
 
   );
